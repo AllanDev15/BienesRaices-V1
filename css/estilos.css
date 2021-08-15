@@ -1,0 +1,465 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+html{
+    font-size: 62.5%; /*Reset para Rems - 62.5% = 10px - 1rem = 10px*/
+}
+body{
+    font-family:'Lato', sans-serif;
+    font-size: 1.6rem;
+}
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 3.4rem;
+}
+h3{
+    font-size: 3rem;
+}
+h4{
+    font-size: 2.6rem;
+}
+img{
+    max-width: 100%;
+}
+
+.contenedor{
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto; /*Centra el contenido dentro del contenedor*/
+}
+.fw-300{
+    font-weight: 300;
+}
+.text-center{
+    text-align: center;
+}
+.d-block{
+    display: block!important;
+}
+.align_right{
+    display: flex;
+    justify-content: flex-end;
+}
+.contenido-centrado{
+    max-width: 80rem;
+}
+.top-margin{
+    margin-top: 2rem;
+}
+
+/**Botones**/
+.boton{
+    /* display: inline-block; */
+    color:white;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    margin-top: 2.5rem;
+    text-align: center;
+    border: none;
+    display:block;
+    flex: 0 0 100%;
+}
+@media(min-width: 768px) {
+    .boton{
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+.boton:hover{
+    cursor: pointer;
+}
+.boton-amarillo{
+    background-color: #E08709
+}
+.boton-verde{
+    background-color: #71B100;
+}
+
+/*Header*/
+#header-img.header-menu{
+    background-image: url(../img/header.jpg);
+    background-position: center center;
+    background-size: cover; /*Ocupar todo el espacio disponible respetando la relacion aspecto*/
+    height: 100vh; /*Viewport height*/
+    min-height: 50rem;
+}
+.header-menu{
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+    margin-bottom: 4rem;
+    
+}
+.barra-menu{
+    padding-top: 2rem;
+}
+@media(min-width: 768px) {
+    .barra-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.nav{
+    display: none;
+}
+@media(min-width: 768px) {
+    .nav{
+        display: inline;
+    }
+}
+.nav:target{
+    display: inline;
+}
+.nav a{
+    color: white;
+    margin-right :1rem;
+    font-size: 2.2rem;
+    display: block;
+    margin: 1.5rem;
+}
+@media(min-width: 768px) {
+    .nav a{
+        display: inline;
+        font-size: 1.8rem;
+    }
+    .nav a:last-of-type{
+        margin: 0;
+    }
+}
+.nav a:hover{
+    color: rgb(200, 200, 200);
+}
+
+.mobile-menu img{
+    width: 5rem;
+}
+@media(min-width: 768px) {
+    .mobile-menu{
+        display: none;
+    }
+}
+
+.titulo{
+    height: 100%;
+    display: flex;  
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+@media(min-width: 768px) {
+    .titulo{
+        text-align: left;
+    }
+}
+.titulo h1{
+    color: white;
+    padding-bottom: 2rem;
+    line-height: 1.8;
+    max-width: 70rem;
+}
+
+/*Iconos*/
+.seccion{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+section.seccion h2{
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+@media(min-width: 768px) {
+    .iconos-nosotros{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5rem;
+    }
+}
+.icono{
+    text-align: center;
+    line-height: 1.8;
+}
+@media(min-width: 768px) {
+    .icono{
+        flex-basis: calc(33.33333333% - 1rem);
+    }
+}
+.icono h3{
+    text-transform: uppercase;
+}
+
+/*Anuncias*/
+main.contenedor h2{
+    margin-top: 5.5rem;
+    margin-bottom: 4rem;
+}
+
+.contenedor-anuncios{
+    flex-wrap: wrap; /*Para que muestre los objetos hijos con el ancho definido,
+                            Si se supera este ancho, se pasa a una siguiente 'fila'*/
+}
+@media(min-width: 768px) {
+    .contenedor-anuncios{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+}
+.anuncio{
+    /* flex-grow: 0;
+    flex-shrink: 0; /*Evita que los objetos se encojan*/
+    flex-basis: calc(33.33333333% - 1rem);
+    border: #b5b5b5 solid 1px;
+    background-color: #f5f5f5;
+    margin-bottom: 2rem;
+}
+.contenido-anuncio{
+    padding: 2rem;
+}
+.contenido-anuncio h3.fw-300{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.contenido-anuncio p{
+    line-height: 2;
+}
+
+.precio{
+    color: #71B100;
+    font-weight: 700;
+}
+
+.iconos-anuncios{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 3rem 0 3rem;
+    max-width: 50rem;
+    flex: 1;
+}
+.iconos-anuncios li{
+    display: flex;
+}
+.iconos-anuncios li img{
+    margin-right: 2rem;
+}
+.iconos-anuncios li p{
+    display: flex;
+    align-items: center;
+}
+
+
+/**Contacto**/
+.img-contacto{
+    margin-top:2.5rem;
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+}
+.contenido-contacto{
+    /* flex: 1;*/
+    /* flex-grow: 1; */
+    flex: 0 0 95%;
+    /* flex-basis: 110rem; */
+    color: white;
+}
+.contenido-contacto p{
+    font-size: 1.7rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+}
+
+
+/**Seccion Inferior**/
+
+@media(min-width: 768px) {
+    .seccion-inferior{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.blog{
+    flex-basis: 60%;
+}
+.blog h3{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.entrada-blog{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.entrada-blog:last-of-type{
+    margin-bottom: 0;
+}
+
+.imagen-entrada{
+    flex-basis: 40%;
+}
+.texto-entrada{
+    flex-basis: calc(60% - 3rem);
+}
+
+.texto-entrada a{
+    color:black;
+}
+.texto-entrada a h4{
+    margin-bottom: 2rem;
+}
+.texto-entrada a h4::after{
+    content: '';
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background-color: #71B100;
+    margin-top: .5rem;
+}
+.texto-entrada p{
+    margin-bottom: 2rem;
+}
+.texto-entrada p span{
+    color: #E08709;
+}
+
+/**Testimonial**/
+
+.testimoniales{
+    flex-basis: calc(35% - 2rem);
+}
+.testimoniales h3{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.testimonial{
+    background-color: #71B100;
+    font-size: 2.3rem;
+    padding: 3rem;
+    line-height: 1.5;
+    color:white;
+    border-radius: 1.5rem;
+}
+.testimonial blockquote{
+    position: relative; /*padre*/
+    padding-left: 6rem;
+}
+.testimonial blockquote::before{
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    position: absolute; /*hijo*/
+    top: -1rem;
+    left: 0;
+}
+.testimonial p{
+    margin-top: 3rem;
+    text-align: right;
+}
+
+/**Footer**/
+
+.pie-pagina{
+    background-color: #333333;
+    margin-bottom: 0;
+}
+.contenedor-pie{
+    padding: 3rem 0;
+    text-align: center;
+}
+@media(min-width: 768px) {
+    .contenedor-pie{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.copyright{
+    color:white;
+}
+
+
+
+/***********NOSOTROS***********/
+
+@media(min-width: 768px) {
+    .contenido-nosotros{    /**PADRE**/
+        display: grid;
+        grid-template-columns: 50% 50%;
+        /* grid-template-columns: repeat(2, 1fr); */
+        grid-column-gap: 2rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+}
+.texto-nosotros blockquote{
+    font-weight: 900;
+    font-size: 2rem;
+    padding: 5rem 0;
+}
+
+
+
+/***********ANUNCIO***********/
+.resumen-propiedad{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+
+/***********CONTACTO***********/ 
+form p{
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem 0;
+    color: #4f4f4f;
+}
+legend{
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+label{
+    display: block;
+    font-weight: 700;
+}
+input:not([type="submit"]),
+textarea,
+select{
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 3rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+textarea{
+    height: 20rem;
+}
+.contactar{
+    max-width: 25rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+input[type="radio"]{
+    background-color: white;
+    width: auto;
+    margin: 0;
+    align-items: center;
+}
+
