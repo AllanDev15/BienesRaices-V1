@@ -2,7 +2,7 @@
 
 ![Website preview](./preview.gif 'Preview de la pagina web')
 
-#### [Ver página](https://allandev15.github.io/BienesRaices-V1/)
+#### [Ver página](https://allandev15.github.io/BienesRaicesV1-DesarrolloWebCompleto/)
 
 ---
 
